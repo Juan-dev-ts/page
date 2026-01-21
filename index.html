@@ -116,24 +116,22 @@
     }
     </script>
 
-    <!-- TailwindCSS CDN -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Estilos críticos inline para prevenir FOUC -->
+    <style>
+        body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            max-width: 100vw;
+            overflow: hidden;
+        }
+    </style>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
-
-    <!-- Material Symbols -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
-
-    <!-- AOS - Animate On Scroll Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Estilos Personalizados -->
-    <link href="styles.css" rel="stylesheet" />
-
-    <!-- Configuración de TailwindCSS -->
+    <!-- Configuración de TailwindCSS (debe ir antes del CDN) -->
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -159,6 +157,24 @@
             },
         }
     </script>
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- AOS - Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <!-- Estilos Personalizados -->
+    <link href="styles.css" rel="stylesheet" />
 </head>
 
 <body
