@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description"
+        content="Suarez Technology - Soluciones de software personalizadas, SaaS y consultoría tecnológica. Project.io: gestor de proyectos para un seguimiento más directo." />
+    <meta name="keywords"
+        content="desarrollo software, SaaS, consultoría tecnológica, gestor de proyectos, Project.io" />
+    <title>Suarez Technology | Project.io</title>
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- AOS - Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Estilos Personalizados -->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!-- Configuración de TailwindCSS -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0a0a0a",
+                        "surface-dark": "#161b22",
+                        "border-dark": "#30363d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+
+    <!-- Navegación -->
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-border-dark">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex h-20 items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-primary p-1.5 rounded-lg">
+                    <svg class="size-6 text-white" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+                    </svg>
+                </div>
+                <h1 class="text-xl font-extrabold tracking-tight">SUAREZ<span class="text-primary">TECH</span></h1>
+            </div>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#projectio">Project.io</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#servicios">Servicios</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#clientes">Clientes</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#contacto">Contacto</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="hidden sm:block text-sm font-semibold hover:text-primary">Iniciar Sesión</button>
+                <button
+                    class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                    Comenzar
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative pt-20">
+        <!-- Sección Hero -->
+        <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 hero-gradient"></div>
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+                <div class="space-y-8" data-aos="fade-right">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </span>
+                        Presentamos Project.io v1.0
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight text-white">
+                        Optimiza la <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Innovación</span>
+                        con Project.io
+                    </h1>
+                    <p class="text-lg lg:text-xl text-slate-400 max-w-lg leading-relaxed">
+                        Suarez Technology ofrece soluciones de software personalizadas y la herramienta definitiva de
+                        gestión de proyectos para un seguimiento más directo y eficiente.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/573108860830?text=Hola%20Suarez%20Technology%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20Project.io%20y%20sus%20soluciones%20de%20software.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%3F"
+                            target="_blank" rel="noopener noreferrer"
+                            class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all flex items-center justify-center gap-2 group">
+                            Comenzar Gratis
+                            <span
+                                class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </a>
+                        <a href="https://wa.me/573108860830?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20demo%20de%20Project.io%20para%20mi%20empresa."
+                            target="_blank" rel="noopener noreferrer"
+                            class="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all">
+                            Agendar Demo
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4">
+                        <div class="flex -space-x-3">
+                            <div
+                                class="w-10 h-10 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center text-[10px] font-bold">
+                                SP</div>
+                            <div
+                                class="w-10 h-10 rounded-full border-2 border-background-dark bg-primary flex items-center justify-center text-[10px] font-bold">
+                                VC</div>
+                            <div
+                                class="w-10 h-10 rounded-full border-2 border-background-dark bg-indigo-600 flex items-center justify-center text-[10px] font-bold">
+                                FP</div>
+                        </div>
+                        <p class="text-sm text-slate-500 font-medium">Empresas líderes confían en nosotros</p>
+                    </div>
+                </div>
+                <div class="relative lg:block hidden" data-aos="fade-left" data-aos-delay="200">
+                    <div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
+                    <div
+                        class="relative floating-mockup neon-border rounded-xl border border-white/10 overflow-hidden aspect-[4/3]">
+                        <img src="hero-image.png"
+                            alt="Desarrollador de Suarez Technology trabajando con tecnología innovadora"
+                            class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prueba Social - Clientes -->
+        <section id="clientes" class="py-20 border-y border-border-dark bg-black/20">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <p class="text-slate-500 text-sm font-semibold uppercase tracking-widest mb-10" data-aos="fade-up">
+                    Impulsando empresas innovadoras</p>
+                <div
+                    class="flex flex-wrap justify-center items-center gap-12 lg:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+                    <h3 class="text-2xl font-bold text-white italic" data-aos="fade-up" data-aos-delay="100">SOLDEPLAST
+                    </h3>
+                    <h3 class="text-2xl font-bold text-white italic" data-aos="fade-up" data-aos-delay="200">VIVRACOL
+                    </h3>
+                    <h3 class="text-2xl font-bold text-white italic" data-aos="fade-up" data-aos-delay="300">
+                        FITNESPEOPLE</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Nosotros -->
+        <section id="sobre-nosotros" class="py-24 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 opacity-10">
+                <img src="tech-pattern.png" alt="Patrón tecnológico" class="w-full h-full object-contain">
+            </div>
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-6">
+                            <span class="material-symbols-outlined text-sm">location_city</span>
+                            Piedecuesta, Colombia
+                        </div>
+                        <h2 class="text-white text-4xl lg:text-5xl font-black mb-6 leading-tight">
+                            Sobre <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Nosotros</span>
+                        </h2>
+                        <div class="space-y-4 text-slate-400 text-lg leading-relaxed">
+                            <p>
+                                <strong class="text-white">Suarez Technology</strong> es una empresa piedecuestana
+                                nacida de la visión de un joven egresado del SENA con un sueño: transformar la manera en
+                                que las empresas colombianas aprovechan la tecnología.
+                            </p>
+                            <p>
+                                Desde nuestros inicios, hemos creído que la innovación tecnológica no debe ser un
+                                privilegio de las grandes corporaciones. Por eso, nos especializamos en crear <strong
+                                    class="text-white">soluciones de software personalizadas, plataformas SaaS
+                                    escalables y consultoría tecnológica</strong> que se adaptan a las necesidades
+                                reales de cada cliente.
+                            </p>
+                            <p>
+                                Con <strong class="text-white">Project.io</strong>, nuestra herramienta insignia de
+                                gestión de proyectos, ayudamos a equipos de todos los tamaños a mantener un seguimiento
+                                más directo y eficiente de sus proyectos, mejorando la productividad y la colaboración.
+                            </p>
+                            <p class="text-primary font-semibold">
+                                Hoy, empresas como Soldeplast, Vivracol y FitnesPeople confían en nosotros para impulsar
+                                su transformación digital.
+                            </p>
+                        </div>
+                        <div class="mt-8 flex flex-wrap gap-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary text-2xl">verified</span>
+                                </div>
+                                <div>
+                                    <p class="text-white font-bold text-xl">100%</p>
+                                    <p class="text-slate-500 text-sm">Satisfacción</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-blue-400 text-2xl">rocket_launch</span>
+                                </div>
+                                <div>
+                                    <p class="text-white font-bold text-xl">SENA</p>
+                                    <p class="text-slate-500 text-sm">Formación</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-green-400 text-2xl">location_on</span>
+                                </div>
+                                <div>
+                                    <p class="text-white font-bold text-xl">Piedecuesta</p>
+                                    <p class="text-slate-500 text-sm">Colombia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative" data-aos="fade-left" data-aos-delay="200">
+                        <div
+                            class="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-full">
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden border border-white/10 neon-border">
+                            <img src="hero-image.png" alt="Fundador de Suarez Technology"
+                                class="w-full h-full object-cover">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent">
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-8">
+                                <p class="text-white font-bold text-xl mb-2">Innovación desde Colombia</p>
+                                <p class="text-slate-300 text-sm">Construyendo el futuro de la tecnología empresarial
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Servicios -->
+        <section id="servicios" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="mb-16" data-aos="fade-up">
+                    <h2 class="text-white text-3xl lg:text-4xl font-bold mb-4">Nuestra Experiencia</h2>
+                    <p class="text-slate-400 text-lg max-w-2xl">
+                        Construimos software que escala con tu ambición, desde herramientas empresariales personalizadas
+                        hasta plataformas SaaS nativas en la nube.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Servicio 1 -->
+                    <div class="group relative p-8 rounded-2xl bg-surface-dark border border-border-dark hover:border-primary/50 transition-all overflow-hidden card-shine"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-primary/20 transition-all">
+                        </div>
+                        <div class="relative z-10 space-y-6">
+                            <div
+                                class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-3xl">developer_mode_tv</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Software Personalizado</h3>
+                                <p class="text-slate-400 leading-relaxed">
+                                    Soluciones empresariales a medida diseñadas para lógica de negocio compleja y alto
+                                    rendimiento. Convertimos tus requisitos únicos en ventajas competitivas.
+                                </p>
+                            </div>
+                            <a class="inline-flex items-center text-primary font-bold group-hover:gap-2 transition-all"
+                                href="#contacto">
+                                Saber Más <span class="material-symbols-outlined ml-1">chevron_right</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2 -->
+                    <div class="group relative p-8 rounded-2xl bg-surface-dark border border-border-dark hover:border-primary/50 transition-all overflow-hidden card-shine"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-blue-500/20 transition-all">
+                        </div>
+                        <div class="relative z-10 space-y-6">
+                            <div
+                                class="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400">
+                                <span class="material-symbols-outlined text-3xl">cloud_done</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Soluciones SaaS</h3>
+                                <p class="text-slate-400 leading-relaxed">
+                                    Aplicaciones escalables, seguras y nativas en la nube construidas para la web
+                                    moderna. Nos encargamos de la arquitectura para que te enfoques en la adquisición de
+                                    usuarios.
+                                </p>
+                            </div>
+                            <a class="inline-flex items-center text-blue-400 font-bold group-hover:gap-2 transition-all"
+                                href="#contacto">
+                                Saber Más <span class="material-symbols-outlined ml-1">chevron_right</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3 - Consultoría -->
+                    <div class="group relative p-8 rounded-2xl bg-surface-dark border border-border-dark hover:border-primary/50 transition-all overflow-hidden card-shine"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-green-500/5 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-green-500/20 transition-all">
+                        </div>
+                        <div class="relative z-10 space-y-6">
+                            <div
+                                class="w-14 h-14 bg-green-500/10 rounded-xl flex items-center justify-center text-green-400">
+                                <span class="material-symbols-outlined text-3xl">psychology</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Consultoría Tecnológica</h3>
+                                <p class="text-slate-400 leading-relaxed">
+                                    Asesoramiento estratégico para optimizar tu infraestructura tecnológica, mejorar
+                                    procesos y acelerar la transformación digital de tu empresa.
+                                </p>
+                            </div>
+                            <a class="inline-flex items-center text-green-400 font-bold group-hover:gap-2 transition-all"
+                                href="#contacto">
+                                Saber Más <span class="material-symbols-outlined ml-1">chevron_right</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Encabezado de Sección -->
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 mt-12">
+            <div class="flex items-end justify-between border-b border-border-dark pb-6" data-aos="fade-up">
+                <div>
+                    <h2 id="projectio" class="text-white text-3xl font-black tracking-tight">Características de
+                        Project.io</h2>
+                    <p class="text-slate-500 font-medium mt-1">La herramienta de gestión de proyectos para un
+                        seguimiento más directo.</p>
+                </div>
+                <button class="hidden lg:flex text-primary font-bold items-center gap-1 hover:underline">
+                    Ver todas las características <span class="material-symbols-outlined">north_east</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Grid de Características -->
+        <section class="py-12">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="group flex flex-col gap-4 rounded-2xl border border-border-dark bg-surface-dark p-8 hover:bg-white/5 transition-all"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-primary group-hover:scale-110 transition-transform origin-left">
+                            <span class="material-symbols-outlined text-4xl"
+                                style="font-variation-settings: 'FILL' 1">fact_check</span>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-white text-xl font-bold leading-tight">Seguimiento de Tareas</h3>
+                            <p class="text-slate-400 text-base leading-relaxed">Visualiza flujos de trabajo y gestiona
+                                plazos con facilidad usando nuestras vistas avanzadas Kanban y Gantt.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col gap-4 rounded-2xl border border-border-dark bg-surface-dark p-8 hover:bg-white/5 transition-all"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-primary group-hover:scale-110 transition-transform origin-left">
+                            <span class="material-symbols-outlined text-4xl"
+                                style="font-variation-settings: 'FILL' 1">bar_chart_4_bars</span>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-white text-xl font-bold leading-tight">Análisis Avanzado</h3>
+                            <p class="text-slate-400 text-base leading-relaxed">Información basada en datos para
+                                impulsar la velocidad de tu equipo y predecir cuellos de botella antes de que ocurran.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col gap-4 rounded-2xl border border-border-dark bg-surface-dark p-8 hover:bg-white/5 transition-all"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-primary group-hover:scale-110 transition-transform origin-left">
+                            <span class="material-symbols-outlined text-4xl"
+                                style="font-variation-settings: 'FILL' 1">hub</span>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-white text-xl font-bold leading-tight">Colaboración en Tiempo Real</h3>
+                            <p class="text-slate-400 text-base leading-relaxed">Comunicación fluida en toda tu
+                                organización con presencia en vivo y actualizaciones instantáneas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección CTA -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="bg-gradient-to-br from-primary to-indigo-900 rounded-3xl p-10 lg:p-20 text-center relative overflow-hidden"
+                    data-aos="zoom-in">
+                    <div class="absolute inset-0 opacity-20"
+                        style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 30px 30px;">
+                    </div>
+                    <div class="relative z-10 space-y-8">
+                        <h2 class="text-4xl lg:text-6xl font-black text-white leading-tight">¿Listo para transformar tu
+                            <br />flujo de trabajo?
+                        </h2>
+                        <p class="text-white/80 text-lg lg:text-xl max-w-2xl mx-auto">
+                            Únete a las empresas que están construyendo el futuro con Suarez Technology y Project.io.
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center gap-4 pt-6">
+                            <a href="https://wa.me/573108860830?text=Hola%20Suarez%20Technology%2C%20quiero%20comenzar%20a%20usar%20Project.io%20para%20mi%20equipo.%20%C2%BFCu%C3%A1les%20son%20los%20pr%C3%B3ximos%20pasos%3F"
+                                target="_blank" rel="noopener noreferrer"
+                                class="bg-white text-primary px-10 py-4 rounded-xl text-lg font-black hover:scale-105 transition-all inline-flex items-center justify-center">
+                                Comenzar Ahora
+                            </a>
+                            <a href="https://wa.me/573108860830?text=Hola%2C%20me%20gustar%C3%ADa%20hablar%20con%20el%20equipo%20de%20ventas%20sobre%20soluciones%20empresariales."
+                                target="_blank" rel="noopener noreferrer"
+                                class="bg-black/20 text-white border border-white/20 px-10 py-4 rounded-xl text-lg font-bold hover:bg-black/30 transition-all inline-flex items-center justify-center">
+                                Contactar Ventas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-black border-t border-border-dark py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-primary p-1 rounded">
+                            <svg class="size-5 text-white" fill="none" viewBox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-white text-lg font-bold">Suarez Technology</h2>
+                    </div>
+                    <p class="text-slate-500 max-w-xs mb-8">
+                        El socio de ingeniería definitivo para productos digitales modernos.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/m4nt3k1ll4_dev" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-lg bg-surface-dark border border-border-dark flex items-center justify-center text-slate-400 hover:text-primary transition-colors cursor-pointer">
+                            <span class="material-symbols-outlined">photo_camera</span>
+                        </a>
+                        <a href="mailto:ceo@suareztechnology.com"
+                            class="w-10 h-10 rounded-lg bg-surface-dark border border-border-dark flex items-center justify-center text-slate-400 hover:text-primary transition-colors cursor-pointer">
+                            <span class="material-symbols-outlined">mail</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/m4nt3k1ll4" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-lg bg-surface-dark border border-border-dark flex items-center justify-center text-slate-400 hover:text-primary transition-colors cursor-pointer">
+                            <span class="material-symbols-outlined">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Producto</h4>
+                    <ul class="space-y-4 text-slate-500 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#projectio">Características</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#servicios">Integraciones</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#contacto">Precios</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#projectio">Novedades</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Empresa</h4>
+                    <ul class="space-y-4 text-slate-500 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#contacto">Sobre Nosotros</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#contacto">Carreras</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#clientes">Clientes</a></li>
+                        <li><a class="hover:text-primary transition-colors"
+                                href="mailto:ceo@suareztechnology.com">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Legal</h4>
+                    <ul class="space-y-4 text-slate-500 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#contacto">Política de Privacidad</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="#contacto">Términos de Servicio</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="#contacto">Política de Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="mt-20 pt-8 border-t border-border-dark flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-sm">
+                    © 2026 Suarez Technology Inc. Todos los derechos reservados.
+                </p>
+                <div class="flex items-center gap-6">
+                    <span class="flex items-center gap-2 text-xs text-slate-500">
+                        <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                        Sistemas Operativos
+                    </span>
+                    <button class="text-slate-400 hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-lg">translate</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Scripts Personalizados -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
